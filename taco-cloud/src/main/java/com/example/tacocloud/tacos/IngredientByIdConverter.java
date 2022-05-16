@@ -1,17 +1,14 @@
 package com.example.tacocloud.tacos;
 
+import com.example.tacocloud.tacos.entity.Ingredient;
+import com.example.tacocloud.tacos.repositoryjdbc.IngredientRepository;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import com.example.tacocloud.tacos.Ingredient.Type;
 
 @Component
 public class IngredientByIdConverter implements Converter<String, Ingredient> {
 
-    private Map<String, Ingredient> ingredientMap = new HashMap<>();
+    /*private Map<String, Ingredient> ingredientMap = new HashMap<>();
 
     public IngredientByIdConverter() {
         ingredientMap.put("FLTO",
@@ -34,10 +31,17 @@ public class IngredientByIdConverter implements Converter<String, Ingredient> {
                 new Ingredient("SLSA", "Salsa", Type.SAUCE));
         ingredientMap.put("SRCR",
                 new Ingredient("SRCR", "Sour Cream", Type.SAUCE));
+    }*/
+    private final IngredientRepository ingredientRepo;
+
+    public IngredientByIdConverter(IngredientRepository ingredientRepo) {
+        this.ingredientRepo = ingredientRepo;
     }
+
+
     @Override
     public Ingredient convert(String id) {
-        return ingredientMap.get(id);
+        return ingredientRepo.findById(id).orElse(null);
     }
 
 }

@@ -1,7 +1,7 @@
-package com.example.tacocloud.tacos;
+package com.example.tacocloud.tacos.controller;
 
+import com.example.tacocloud.tacos.entity.TacoOrder;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
