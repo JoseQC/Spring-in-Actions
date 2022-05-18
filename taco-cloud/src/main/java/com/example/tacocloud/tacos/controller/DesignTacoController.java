@@ -2,7 +2,7 @@ package com.example.tacocloud.tacos.controller;
 
 import com.example.tacocloud.tacos.entity.Ingredient;
 import com.example.tacocloud.tacos.entity.Ingredient.Type;
-import com.example.tacocloud.tacos.repositoryjdbc.IngredientRepository;
+import com.example.tacocloud.tacos.repository.IngredientRepository;
 import com.example.tacocloud.tacos.entity.Taco;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

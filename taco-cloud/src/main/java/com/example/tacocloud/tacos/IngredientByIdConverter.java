@@ -1,7 +1,7 @@
 package com.example.tacocloud.tacos;
 
 import com.example.tacocloud.tacos.entity.Ingredient;
-import com.example.tacocloud.tacos.repositoryjdbc.IngredientRepository;
+import com.example.tacocloud.tacos.repository.IngredientRepository;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 

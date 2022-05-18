@@ -1,4 +1,4 @@
-package com.example.tacocloud.tacos.repositoryjdbc;
+package com.example.tacocloud.tacos.repository;
 
 import com.example.tacocloud.tacos.entity.Ingredient;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -16,7 +16,7 @@ public class JdbcIngredientRepository implements IngredientRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
     */
-    private final JdbcTemplate jdbcTemplate;
+    /*private final JdbcTemplate jdbcTemplate;
 
     public JdbcIngredientRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -63,5 +63,5 @@ public class JdbcIngredientRepository implements IngredientRepository {
                 row.getString("name"),
                 Ingredient.Type.valueOf(row.getString("type")));
     }
-
+*/
 }
